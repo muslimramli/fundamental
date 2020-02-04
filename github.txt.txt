@@ -8,3 +8,11 @@ inisiasi origin | git remote add origin link (sekali)
 ubah link origin | git remote set-url link (kalau mau ubah)
 
 origin = link.
+
+cek log | git log --oneline
+
+
+undoing things
+git checkup commit_id
+git rest commit_id
+git reset commit_id --hard
