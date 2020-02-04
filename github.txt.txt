@@ -1,0 +1,10 @@
+bikin repo di github (sekali)
+init foleder di komputer | git init (sekali)
+catet perubahan di stage | git add . (kalau mau spesifikasi filenya pakai namafile.txt)
+catet perubahan di commit | git commit -m "deskripsi"
+catet peruabhan di github | git push origin master
+
+inisiasi origin | git remote add origin link (sekali)
+ubah link origin | git remote set-url link (kalau mau ubah)
+
+origin = link.
