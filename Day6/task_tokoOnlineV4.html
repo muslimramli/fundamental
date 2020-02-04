@@ -1,0 +1,235 @@
+
+
+
+<script>
+
+    // Tugas Toko ononline Versi 2
+    // Muslim Ramli
+    // ........................................................................
+    let pilih_aksi, penjual, pembeli
+    var buah = ['Apel', 'Grape', 'Orange']
+    var harga = [10000,12000,15000]
+    var stock =[5,8,7]
+
+    pilih_aksi=prompt(`MARKET VERSI 4
+    1. PENJUAL
+    2. PEMBELI`)
+
+           if (pilih_aksi==1) {
+            var pilihan = prompt('1. Lihat Data\n2. Tambah Data\n3. Hapus Data\n4. Edit Data')
+            if (pilihan ==1) {
+                        var lihat = 'Daftar Produk\n'
+                    for(var i = 0 ; i < buah.length ; i ++){
+                        lihat += (i+1) + '. Jenis: ' + buah[i] +' | Harga: '+ harga[i] + ' | Stock: ' + stock[i] + '\n'
+                        
+                    }
+                    alert(lihat)
+                        
+                        
+                    }
+           
+           else if (pilihan==2){
+                    var data_buah_baru = prompt('Masukan Jenis Buah Baru:')
+                    buah.push(data_buah_baru)
+                
+                    var data_stock_baru = prompt ('Masukan Stock Buah Baru:')
+                    stock.push(data_stock_baru)
+
+                    var data_harga_baru = prompt ('Masukan Harga Buah Baru:')
+                    harga.push(data_harga_baru)
+                    var lihat = 'Daftar Produk\n'
+                    for(var i = 0 ; i < buah.length ; i ++){
+                        lihat += (i+1) + '. Jenis: ' + buah[i] +' | Harga: '+ harga[i] + ' | Stock: ' + stock[i] + '\n'
+                        
+            }
+            alert (lihat)
+            
+            
+        }
+        else if (pilihan==3) {
+            var lihat = 'Daftar Produk\n'
+            for(var i = 0 ; i < buah.length ; i ++){
+                lihat += (i+1) + '. Jenis: ' + buah[i] +' | Harga: '+ harga[i] + ' | Stock: ' + stock[i] + '\n'
+             }
+            //  ......................
+                        lihat += 'Pilih Nomor Yang Mau di Hapus?'
+
+            var pilih_hapus= prompt(lihat) //3
+            pilih_hapus = pilih_hapus - 1 // 2
+            if(pilih_hapus >= 0 && pilih_hapus < buah.length){
+                var yakin = prompt('Apakah anda yakin mau menghapus ' + buah[pilih_hapus] + ' ? (y/n)')
+                if(yakin == 'y'){
+                    buah.splice(pilih_hapus,1)
+                    stock.splice(pilih_hapus,1)
+                    harga.splice(pilih_hapus,1)
+                    alert('Berhasil Dihapus')
+                    lihat = 'Daftar Produk\n'
+                    for(var i = 0 ; i < buah.length ; i ++){
+                        lihat += (i+1) + '. Jenis: ' + buah[i] +' | Harga: '+ harga[i] + ' | Stock: ' + stock[i] + '\n'
+                    }
+                    alert(lihat)
+                }else{
+                    alert('Oke Gak jadi Hapus')
+                }
+            }else{
+                alert('Anda Salah Input')
+            }
+
+                        
+        }
+        
+        else if (pilihan==4) {
+                var EditProduct = prompt(`Pilih Kategori yang ingin Anda Edit:
+                1. Stock
+                2. Harga`)
+                lihat = 'Daftar Produk\n'
+                        for(var i = 0 ; i < buah.length ; i ++){
+                            lihat += (i+1) + '. Jenis: ' + buah[i] +' | Harga: '+ harga[i] + ' | Stock: ' + stock[i] + '\n'
+                        }
+                        // alert(lihat)
+                        if (EditProduct==1) {
+                            var Edit_Product_buah = prompt (lihat + '\nmana yang mau di edit?'   )
+                            var new_stock = prompt('Mau Edit Stock Menjadi berapa?')
+                            Edit_Product_buah = Edit_Product_buah-1
+                            stock[Edit_Product_buah] = new_stock
+                            alert('Update Stock Berhasil')
+                            lihat = 'Daftar Produk\n'
+                            for(var i = 0 ; i < buah.length ; i ++){
+                                lihat += (i+1) + '. Jenis: ' + buah[i] +' | Harga: '+ harga[i] + ' | Stock: ' + stock[i] + '\n'
+                            }
+                            alert(lihat)
+                        }
+
+                        if (EditProduct==2) {
+                            var Edit_Product_buah = prompt (lihat + '\nmana yang mau di edit?'   )
+                            var new_harga = prompt('Mau Ubah Harga Menjadi berapa?')
+                            Edit_Product_buah = Edit_Product_buah-1
+                            harga[Edit_Product_buah] = new_harga
+                            alert('Update Harga Berhasil')
+                            lihat = 'Daftar Produk\n'
+                            for(var i = 0 ; i < buah.length ; i ++){
+                                lihat += (i+1) + '. Jenis: ' + buah[i] +' | Harga: '+ harga[i] + ' | Stock: ' + stock[i] + '\n'
+                            }
+                            alert(lihat)
+                        }
+        else{
+            alert('Inputan Salah')
+        }
+            // .............................
+            
+        }
+
+        }  
+        
+        if (pilih_aksi==2) {
+
+            let qt_apel, qt_grape, qt_orange,apel,
+    harga_apel,harga_orange,harga_grape, grape,
+    orange, harga, total, stock_apel, stock_orange,
+    stok_grape, jumlah_uang, uang_kembali
+
+    //    update stock
+    stock_apel = 5
+     stock_orange = 5
+     stock_grape = 6
+     check_stock = true
+     check_uang = true
+
+
+// input stock
+
+     // apel................................
+do {
+    ulang_program = 'y'
+    do
+
+{    qt_apel=prompt('Masukan jumlah apel')
+    
+        if (qt_apel>stock_apel || qt_apel<0 || isNaN(qt_apel)) {
+            alert('Belanja melebih stock/isian Anda salah, cek kembali pesanannya!')
+            }
+        else {
+            check_stock = false
+        }
+    }
+        while (check_stock)
+   
+   
+        // grape................................
+
+        
+        do
+
+{    qt_grape=prompt('Masukan jumlah grape')
+    
+        if (qt_grape>stock_grape || qt_grape<0 || isNaN(qt_grape)) {
+            alert('Belanja melebih stock, cek kembali pesanannya!')
+            }
+            else {
+            check_stock = false
+        }
+    }
+        while (check_stock)
+        
+        
+            // orange................................
+ 
+
+        do
+
+{    qt_orange=prompt('Masukan jumlah orange')
+    
+        if (qt_orange>stock_orange|| qt_orange<0 || isNaN(qt_orange)) {
+            alert('Belanja melebih stock, cek kembali pesanannya!')
+        }
+        else {
+            check_stock = false
+        }
+    }
+        while (check_stock)
+// Penetuan harga produk
+
+    harga_apel=10000
+    harga_grape=15000
+    harga_orange=20000
+
+    
+// Hitung harga
+
+    apel=qt_apel*harga_apel
+    grape=qt_grape*harga_grape
+    orange=qt_orange*harga_orange
+    total=apel+grape+orange
+
+//informasih belanja
+    
+    alert('Detail Harga Belanja \n \n' +
+    'Apel = ' + qt_apel + ' x ' + harga_apel + ' = ' + harga_apel*qt_apel + '\n' 
+    + 'Grape = ' + qt_grape + ' x ' + harga_grape + ' = ' + harga_grape*qt_grape +'\n'
+    + 'Orange = ' + qt_orange + ' x ' + harga_orange + ' = ' + harga_orange*qt_orange + '\n' + '\n TOTAL = ' + total  )
+
+do {
+    jumlah_uang = prompt('Masukan Jumlah Uang!')
+uang_kembali=jumlah_uang-total
+if (jumlah_uang<total) {
+    alert('Uang Anda kurang') }
+    else
+    {
+        alert ('total kembalian adalah: Rp ' + uang_kembali)
+        alert ('Terima Kasih!')
+        check_uang = false
+}}
+
+while (check_uang)
+ulang_program = prompt ('Mau ulangi Program? (y/n)')
+}
+
+while (ulang_program=='y')
+        }
+                   
+
+         
+                
+       
+    
+    </script>

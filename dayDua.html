@@ -1,0 +1,30 @@
+<script>
+let a, plat_nomor 
+a = new Date()
+let tanggal = a.getDate()
+plat_nomor=prompt('Masukan plat_nomor No Anda')
+plat_nomor =  plat_nomor.substr(5,1)
+    if(tanggal % 2 == 0) {
+        tanggal== 'genap'
+    }
+    else
+    {
+        tanggal=='ganjil'
+    }
+        if (plat_nomor % 2 ==0)
+        {
+            plat_nomor='genap'
+        }
+        else
+            {
+                plat_nomor='ganjil'
+            }
+    if(plat_nomor==tanggal)
+    {
+        alert('Boleh Lewat')
+
+    }
+    else{
+        alert('Enggak Boleh Lewat')
+    }
+</script>

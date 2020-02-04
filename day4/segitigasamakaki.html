@@ -1,0 +1,16 @@
+<script>
+let tinggi, hasil =''
+tinggi=prompt ('Masukan Nilai Tinggi')
+
+for ( let i = 1; i<tinggi*2; i+=2) { //jumlah baris/tinggi  
+
+    for ( let k = tinggi-i/2-1; k>0; k--) {
+        hasil+=' ' //cetak spasi
+    }
+    for (let j = 0; j<i*2; j+=2) {
+        hasil+='*' //cetak bintang
+    }
+    hasil+='\n'
+}
+alert (hasil)
+</script>

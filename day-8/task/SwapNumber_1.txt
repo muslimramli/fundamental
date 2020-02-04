@@ -1,0 +1,16 @@
+function input(number) {
+    if (number % 2 ==0) {
+
+        number = String(number)
+        
+        var arr_hasil = number.split('[]')
+        
+        var output = arr_hasil[2] + arr_hasil[3] + arr_hasil[0] + arr_hasil[1]
+    
+        return output
+    }
+    else {
+        return 'Anda harus input jumlah digit genap!'
+    }
+
+}   

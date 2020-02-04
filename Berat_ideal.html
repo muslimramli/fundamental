@@ -1,0 +1,35 @@
+<script>
+    let berat_badan, tinggi_badan, tinggi_badan_meter, hasil
+    
+    berat_badan = prompt ('Masukan Berat Badan Anda:')
+    tinggi_badan = prompt ('Masukan Tinggi Badan Anda:')
+    
+    tinggi_badan_meter = tinggi_badan/100
+
+    hasil = berat_badan/(tinggi_badan_meter*tinggi_badan_meter)
+    
+    alert ('IMT Anda adalah: ' + hasil)
+    
+    if (hasil<18.5) {
+        alert (' Berat Badan Anda Kurang!')
+    }
+    else if 
+        (hasil > 18.5 < 24.9) {
+        alert ('Berat Badan Anda Ideal') }
+    
+        else if 
+        (hasi>25.0 < 29.9) {
+            alert ('Berat Badan Anda berlebih')
+        }
+
+        else if 
+        (hasil > 30.0 < 39.9)
+        {
+        alert ('Berat Badan Anda Sangat Berlebih')
+    }
+        else {
+            alert ('Anda Obesitas')
+        }
+    
+
+</script>

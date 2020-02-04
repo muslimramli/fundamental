@@ -1,0 +1,63 @@
+<script>
+    let jam_pertama, jam_kedua, biaya_jam_pertama, biaya_jam_kedua, selisih_jam
+    let jam_masuk, jam_keluar, biaya_parkir, biaya_parkir_ekstra, ulang_program, cek_jam
+  
+    
+do {
+    
+
+    cek_jam = true
+    ulang_program = 'y'
+    biaya_jam_pertama = 4000
+    biaya_jam_kedua = 1000
+
+    do {
+        jam_masuk = Number(prompt ('Masuk jam berapa sih? (0-24)'))
+            if (jam_masuk < 0  || jam_masuk > 24 || isNaN(jam_masuk))
+            {
+                alert ('Anda salah memasukan jam')
+            }
+            else
+            {
+                cek_jam= false
+            }
+
+    }
+    while (cek_jam)
+    
+    
+    cek_jam = true
+    do {
+        
+        jam_keluar = prompt ('Keluarnya jam berapa?') // 12
+        if (jam_keluar < 0 || jam_masuk>jam_keluar || jam_keluar > 24 || isNaN(jam_keluar)) {
+            
+            alert ('Anda Salah memasukan jam')
+        }
+        else {
+            cek_jam = false
+        }
+
+    }
+    while (cek_jam)
+    
+    selisih_jam = jam_keluar - jam_masuk
+     alert ('Anda Parkir di sini selama ' + selisih_jam + ' jam')
+    
+    if (selisih_jam < 4) { 
+        
+        biaya_parkir = selisih_jam  * biaya_jam_pertama
+       alert(biaya_parkir)
+    
+    }
+    else
+    {
+        biaya_parkir_ekstra = selisih_jam - 3
+        biaya_parkir= (biaya_parkir_ekstra * biaya_jam_kedua) + (3 * biaya_jam_pertama)
+        alert (biaya_parkir)
+        
+    }
+    ulang_program = prompt ('Mau ulangi Program? (y/n)')
+}
+while (ulang_program == 'y')
+</script>

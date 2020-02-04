@@ -1,0 +1,16 @@
+<script>
+let qt_apel, stock_apel, check_stock
+check_stock = true
+stock_apel = 5
+    do {
+        qt_apel = prompt ('Masukin jumlah pesanan Anda: ')
+        if (qt_apel > stock_apel) {
+        alert ('Out of Stock')
+    }
+        else 
+      {  check_stock =false            
+      }
+
+        
+    } while (check_stock);
+</script>

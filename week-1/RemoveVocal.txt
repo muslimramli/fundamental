@@ -1,0 +1,13 @@
+
+function RemoveVocal(MyString) {
+convertToString=MyString.split ('')
+var vocal = ['a','i','u','e','o']
+    if (MyString.index
+        )
+return MyString.splice(vocal)
+
+}   
+
+console.log(RemoveVocal('muslim ramli'));.
+
+Note: Program ini belum siap, saya baru berhasil mengconvert string ke array, namun bingung cara memanggil kedua array untuk pengecekan index yang sama.

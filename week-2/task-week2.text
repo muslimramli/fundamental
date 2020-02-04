@@ -1,0 +1,96 @@
+var names = '';
+
+function countWords(arr) {
+    var res = [];
+    var obj = {};
+
+    names.forEach(function(name) {
+        if(name in obj) {
+            obj[name] += 1;
+            res.push(name + "(" + obj[name] + ")");
+        } else {
+            obj[name] = 0;
+            res.push(name);
+        }
+    });
+
+    return res.join(",");
+}
+
+var res = countWords(names);
+console.log(res);
+
+//////
+
+
+function MoveA(string = '', total = 0) {
+    let result = ''
+    for (let i = 0; i < string.length; i++){
+      result += String.fromCharCode(string.charCodeAt(i) + total) 
+    }
+    return result
+  }
+  console.log(MoveA('abcd',2))
+  ////
+
+  function mergeTwo(arr1, arr2) {
+    let merged = [];
+    let index1 = 0;
+    let index2 = 0;
+    let current = 0;
+  
+    while (current < (arr1.length + arr2.length)) {
+  
+      let isArr1Depleted = index1 >= arr1.length;
+      let isArr2Depleted = index2 >= arr2.length;
+  
+      if (!isArr1Depleted && (isArr2Depleted || (arr1[index1] < arr2[index2]))) {
+        merged[current] = arr1[index1];
+        index1++;
+      } else {
+        merged[current] = arr2[index2];
+        index2++;
+      }
+  
+      current++;
+    }
+  
+    return merged.sort();
+  }
+  console.log(mergeTwo([2,6,5,4,], [8,7,9,1,3]))
+
+  ///
+  function jumlahA(string = '') {
+  let result = 0;
+  for (let i = 0; i < string.length; i++){
+    result += string.charCodeAt(i) - 96 
+  }
+  return result
+}
+console.log(jumlahA('abata'))
+
+
+///
+
+// Soal Fundamental JC 01 Bandung
+// Soal No.2
+// Giran
+
+var tahunDetik = (input=0) => {
+    
+
+    tahun = Math.floor(input / (60 * 60 * 24 * 365))
+    input = input % (60 * 60 * 24 * 365)
+    hari = Math.floor(input / (60 * 60 * 24))
+    input = input % (60 * 60 * 24)
+    jam = Math.floor(input / (60 * 60))
+    input = input % (60 * 60)
+    menit = Math.floor(input / 60)
+    detik = input % 60
+
+    return `${tahun}years, ${hari}days, ${jam}hours, ${menit}minutes, and ${detik}seconds`
+    
+    
+}
+
+console.log(tahunDetik(123456789))

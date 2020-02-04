@@ -1,0 +1,50 @@
+<script>
+let batu, gunting, kertas, player_1, player_2, pilih
+
+player_1=prompt (`Player 1 Kamu Pilih Apa?
+1. Batu
+2. Gunting
+3. Kertas`)
+player_2=prompt (`Player 2 Kamu Pilih Apa?
+1. Batu
+2. Gunting
+3. Kertas`)
+console.log(player_1, player_2)
+
+
+switch (true) {
+
+    case (player_1=='batu' && player_2 == 'gunting'):
+        alert ('Player 1 Kamu Menang')
+        break;
+        
+        case (player_1=='batu' && player_2 == 'kertas'):
+        alert ('Player 1 Kamu Kalah')
+        break;
+        
+        case (player_1=='gunting' && player_2 == 'batu'):
+        alert ('Player 1 Kamu Kalah')
+        break;
+
+        case (player_1=='gunting' && player_2 == 'kertas'):
+        alert ('Player 1 Kamu Menang')
+        break;
+
+        case (player_1=='kertas' && player_2 == 'batu'):
+        alert ('Player 1 Kamu Menang')
+        break;
+
+        case (player_1=='kertas' && player_2 == 'gunting'):
+        alert ('Player 1 Kamu Kalah')
+        break;
+
+        case (player_1== player_2):
+        alert ('Tidak ada pemenang / score sama');
+        break;
+        
+        default:
+            alert ('Pilihan Anda Salah')
+        
+
+}
+</script>
