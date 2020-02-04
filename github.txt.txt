@@ -16,3 +16,4 @@ undoing things
 git checkup commit_id
 git rest commit_id
 git reset commit_id --hard
+git checkout master =>balik ke semula
