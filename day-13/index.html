@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="ini_id">MASUKAN NAMA ANDA: </p>
+    <input type="text" placeholder="Masukan Nama" id="Nama">
+    <button class="butto_1">KLIK</button>
+  
+
+
+    <script>
+    //DOM ==> Document Object Model
+    // document.getElementById('ini_id').innerHTML = 'Muslim' //ini contoh selector
+    // 
+    
+    const onClikBtn =() => {
+        let value = document.getElementById('Nama').value
+        let el_p = document.getElementById("ini_id")
+        el_p.innerHTML = 'Selamat Datang ' +value + '!'
+    }
+    document.getElementsByClassName('butto_1') [0]. addEventListener ('click', onClikBtn)
+    </script> 
+
+</body>
+</html>

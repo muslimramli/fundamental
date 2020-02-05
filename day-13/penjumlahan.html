@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <input type="number" placeholder="Angka 1" id="angka1">
+    <input type="number" placeholder="Angka 2 " id="angka2">
+    <button>Jumlahkan</button>
+    <br>
+    <h3>Hasilnya adalah: </h3>
+
+</center>
+<script>
+    function onJumlah() {
+        var angka1= document.getElementById('angka1').value
+        var angka2 = document.getElementById('angka2').value
+        if (angka1=='' || angka2=='') {
+            document.getElementsByTagName('h3')[0].innerHTML = 'Form enggak boleh kosong!'
+            document.getElementsByTagName('h3')[0].style="color: red; font-size: 40px"
+        }
+        else{
+            
+            var hasil = 'Hasilnya adalah: ' + (Number(angka1) + Number(angka2))
+            document.getElementsByTagName('h3')[0].innerHTML = hasil
+            document.getElementsByTagName('h3')[0].style="color: black; font-size: 20px"
+        }
+    }
+    document.getElementsByTagName('button')[0].addEventListener('click', onJumlah)
+
+</script>
+</body>
+</html>
