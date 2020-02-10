@@ -24,3 +24,5 @@ if (number>5) {
     else
 {    console.log ('kecil')
 }
+
+// comment dari MacAir
