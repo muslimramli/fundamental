@@ -25,18 +25,22 @@ function CekEmail(email) {
 
 function PasswordValidation(password='') {
     let adaUpperCase = false
+    let adaNumeric = false
     for (i=0; i<password.length; i++) {
         if (password[i] == password[i].toUpperCase()) {
             adaUpperCase = true;
            }
+        if (password[i] >=0) {
+            adaNumeric = true
+        }
       
     }
 
-    if (adaUpperCase) {
-        return 'upper case true'
+    if (adaUpperCase && adaNumeric) {
+        return 'password Strenght'
        }
        else {
-        return 'lower case true'
+        return 'Password Week'
        }
         
 }
