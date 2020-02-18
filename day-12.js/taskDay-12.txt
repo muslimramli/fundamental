@@ -1,5 +1,5 @@
 
-function sumNumber(nilai = []) {
+function Number(nilai = []) {
     nilai= nilai.sort((a, b) => a - b)
     nilai_pertama = nilai [0]
     nilai_kedua = nilai [1]

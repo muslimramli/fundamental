@@ -93,3 +93,37 @@ Alphabet_position("Have you done your homework?")
 // 3 11
 
 
+let persistence3 = (num) => {
+    var count = 0
+    do {
+        var hasilKali = 1
+        num = String(num)
+        for (var i=0; i<num.length; i++){
+                hasilKali *= num[i]
+        
+        }
+        count++
+        num = hasilKali
+        num = String(num)
+    }
+    while (num.length>1)
+    console.log(count)
+}
+persistence3(25)
+
+
+
+persistence4 = (num=0) => {
+
+        var jumlahLoop = num.toString().length
+        num = num.toString().split('').reduce(function(a,b,i) {
+            console.log('jumlah looping: ' +i)
+            // jumlahLoop += i
+            return a*b
+        }
+        
+        )
+
+        return jumlahLoop
+    }
+    console.log(persistence4('39'))

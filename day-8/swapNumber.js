@@ -8,6 +8,7 @@ function swapeNumber(number){
     for (var i=0; i<number.length; i+=2)
         {
             temp.push(number[i] + number[i+1])
+            console.log(`hasil temp: ` + temp)
         }
         console.log ('Sebelum Reverse= ' + temp)
         temp=temp.reverse()
